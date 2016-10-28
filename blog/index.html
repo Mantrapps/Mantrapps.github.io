@@ -1,0 +1,53 @@
+---
+layout: default
+title: Guanliang Chen's Blog
+---
+
+<h2 style="padding:1.25em 0 0 0"><font color="#3f4e85">{{page.title}}</font></h2>
+<p style="padding:0 0 4.25em 0"><font font-size="2.25em">Here you can find some interesting thoughts that I have during my PhD journey.</font></p>
+
+<div style="padding:0 0 5em 0">
+	<div class="posts-list">
+		{% for post in paginator.posts %}
+		<article class="post-preview">
+	    	<a href="{{ post.url | prepend: site.baseurl }}">
+		  		<h3 class="post-title">{{ post.title }}</h3>
+		  		{% if post.subtitle %}
+		  		<h3 class="post-subtitle">{{ post.subtitle }}</h3>
+		  		{% endif %}  
+	    	</a>
+
+	    <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+	  
+	    <div class="post-entry" style="padding:0 0 3.25em 0">
+			{{ post.content | truncatewords: 80 | strip_html | xml_escape}}
+			<a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more"> [Read&nbsp;More]</a>
+	    </div>
+	  
+		</article>
+		{% endfor %}
+	</div>
+
+
+	{% if paginator.total_pages > 1 %}
+	<ul class="pager main-pager">
+		{% if paginator.previous_page %}
+		<li class="previous">
+	    	<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+	  	</li>
+	  	{% endif %}
+	  
+	  	{% if paginator.next_page %}
+	  	<li class="next">
+	    	<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+	  	</li>
+	  	{% endif %}
+	</ul>
+	{% endif %}
+</div>
+
+	
+
+
+
+	

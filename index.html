@@ -1,134 +1,248 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kai Zhu's Personal Website</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <!-- css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+	  <link href="color/default.css" rel="stylesheet" media="screen">
+	  <script src="js/modernizr.custom.js"></script>
+    
+  </head>
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Mantrappas</title>
-	<meta name="author" content="Mantrapps" />
-	<meta name="description" content="Personal Page" />
-	<meta name="keywords"  content="" />
-	<meta name="Resource-type" content="Document" />
-	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="css/examples.css"  media="screen"/>
-	<style>
+  <body>
 
-	/* Style for our header texts
-	* --------------------------------------- */
-	h1{
-		font-size: 5em;
-		font-family: arial,helvetica;
-		color: #fff;
-		margin:0;
-		padding:0;
-	}
-
-	/* Centered texts in each section
-	* --------------------------------------- */
-	.section{
-		text-align:center;
-		overflow: hidden;
-	}
-
-	#myVideo{
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		top:0;
-		right:0;
-		width: 100%;
-		height: 100%;
-		background-size: 100% 100%;
- 		background-color: black; /* in case the video doesn't fit the whole page*/
-  		background-image: /* our video */;
-  		background-position: center center;
-  		background-size: contain;
-   		object-fit: cover; /*cover video background */
-   		z-index:3;
-	}
-
-
-
-	/* Layer with position absolute in order to have it over the video
-	* --------------------------------------- */
-	#section0 .layer{
-		position: absolute;
-		z-index: 4;
-		width: 100%;
-		left: 0;
-		top: 43%;
-
-		/*
-		* Preventing flicker on some browsers
-		* See http://stackoverflow.com/a/36671466/1081396  or issue #183
-		*/
-		-webkit-transform: translate3d(0,0,0);
-		-ms-transform: translate3d(0,0,0);
-		transform: translate3d(0,0,0);
-	}
-
-	/*solves problem with overflowing video in Mac with Chrome */
-	#section0{
-		overflow: hidden;
-	}
-
-
-	/* Bottom menu
-	* --------------------------------------- */
-	#infoMenu li a {
-		color: #fff;
-	}
-
-
-	/* Hiding video controls
-	* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
-	* --------------------------------------- */
-	video::-webkit-media-controls {
-	  display:none !important;
-	}
-
-	</style>
-
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/scrolloverflow.js" ></script>
-	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-	<script type="text/javascript" src="js/examples.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				verticalCentered: true,
-				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE']
-			});
-		});
-	</script>
-
-</head>
-<body>
-<div id="fullpage">
-	<div class="section " id="section0">
-		<video id="myVideo" loop muted data-autoplay>
-			<source src="img/Coverr-lamp.mp4" type="video/mp4">
-			<source src="img/Coverr-lamp.webm" type="video/webm">
-		</video>
-		<div class="layer">
-			<h1>Welcome to my page</h1>
-		</div>
+	<div class="menu-area">
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li>
+					<a href="#intro">Home</a>
+				</li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div><!-- /dl-menuwrapper -->
 	</div>
 
-	<div class="section" id="section1">
-        <h1>Hi <br />I'm </h1>
+  <!-- intro area -->
+  <div id="intro">
+		<div class="intro-text container">
+		  <div class="row">
+		  <div class="col-md-12">
+		    <div class="brand">
+        <h1 class="name">Kai Zhu</h1>
+	      <div class="line-spacer"></div>
+        <h1 class="name">朱凯</h1>
+		    </div>
+		  </div>
+		  </div>
+	 	</div>
+  </div>
+
+
+  <!-- About -->
+  <section id="about" class="home-section bg-white">
+  <div class="container">
+    <!-- Logo -->
+    <!-- <div class="logo"></div> -->
+    <div class="row">
+      <div class="flipping-cards">
+      <input type="checkbox" id="avatar-back">
+      <label for="avatar-back">
+        <span class="wrapper">
+          <span class="image"></span>
+          <span class="back"></span>
+        </span>
+      </label>
+      </div>
     </div>
-    <div class="section" id="section2">
-	    <div class="slide" id="slide1"><h1>Projects</h1></div>
-	    <div class="slide" id="slide2"><h1>Search Engine</h1></div>
-	</div>
-	<div class="section" id="section3"><h1>Look foword</h1></div>
-</div>
-</body>
+
+    <div class="line-spacer"></div>
+
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+      <p>
+        I'm a master student at <a href="http://www.utdallas.edu" target="_blank">University of Texas, Dallas</a>.
+        My major is computer science, focus on intelligent system.
+        My favorite technical skill including Python, Java, JavaScripts.
+      </p>
+      <div class="line-spacer"></div>
+      <p>
+        I am a programming language enthusiast, curious engineer and self-proclaimed polyglot programmer.
+        Before study at UTD, I worked at United Technologies Asia HQ.
+        Prior to work at UTC, I studyed at Nanjing for four years and received a BS degree in Information System from
+        <a href="http://en.njtech.edu.cn/" target="_blank">Nanjing University of Technology</a>.
+      </p>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+	<!-- spacer -->
+	<section id="spacer1" class="home-section spacer">
+  <div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="color-light">
+        <p>所见即所得／What You See Is What You Get</p>
+				</div>
+			</div>
+		</div>
+  </div>
+	</section>
+
+	  <!-- Projects -->
+	 <section id="projects" class="home-section bg-white">
+		<div class="container">
+			  <div class="row">
+				  <div class="col-md-offset-2 col-md-8">
+					  <div class="section-heading">
+					    <h2>Projects</h2>
+              <p>I've worked on</p>
+					  </div>
+				  </div>
+			  </div>
+
+        <div class="row">
+          <div class="col-md-offset-2 col-md-2">
+            <a href="/" target="_blank"><img src="img/projects/zippy-logo-160.png" class="img-circle"></a>
+          </div>
+          <div class="col-md-6">
+            <p>Search Engine for Books.
+              </p>
+          </div>
+        </div>
+
+        <div class="line-spacer"></div>
+
+        <div class="row">
+          <div class="col-md-offset-2 col-md-2">
+            <img src="img/projects/svm-logo-160.png" class="img-circle">
+          </div>
+          <div class="col-md-6">
+            <p>Cloud based Robo Code Game.
+            </p>
+          </div>
+        </div>
+
+        <div class="line-spacer"></div>
+
+        <div class="row">
+          <div class="col-md-offset-2 col-md-2">
+            <a href="s" target="_blank"><img src="img/projects/mvm-logo-160.png" class="img-circle"></a>
+          </div>
+          <div class="col-md-6">
+            <p>Movie Trails Website</a>.
+            </p>
+          </div>
+        </div>
+
+		</div>
+	</section>
+
+	 <!-- Publications -->
+	
+	<!-- spacer 2 -->
+	<section id="spacer2" class="home-section spacer">
+    <div class="container">
+      <div class="row">
+      <div class="col-md-12">
+      <div class="color-light">
+      <p>什么的都是浮云...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+        欢迎各厂招工啊...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      </div>
+      </div>
+      </div>
+    </div>
+	</section>
+
+	 <!-- Contact -->
+	  <section id="contact" class="home-section bg-white">
+	  	<div class="container">
+			  <div class="row">
+				  <div class="col-md-offset-2 col-md-8">
+					<div class="section-heading">
+					 <h3>Me on the Web</h3>
+					</div>
+				  </div>
+			  </div>
+
+			<div class="row mar-top30 ">
+				<div class="col-md-offset-2 col-md-8">
+					<ul class="social-network">
+            <li><a href="mailto:kxz160030@utdallas.edu?Subject=Hej hej" target="_top">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+						</span></a>
+						</li>
+
+            <li><a href="http://www.weibo.com/" target="_blank">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+						</span></a>
+						</li>
+
+            <li><a href="https://twitter.com/" target="_blank">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+						</span></a>
+						</li>
+
+            <li><a href="https://www.linkedin.com/in/kaiz90206/" target="_blank">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+						</span></a>
+						</li>
+
+						<li><a href="https://www.facebook.com/" target="_blank">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+						</span></a>
+						</li>
+
+
+            <li><a href="https://github.com/mantrappas" target="_blank">
+						<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+						</span></a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+
+	  	</div>
+	  </section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>Copyright &copy;2017 K Zhu.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	 <!-- js -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.smooth-scroll.min.js"></script>
+	<script src="js/jquery.dlmenu.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/custom.js"></script>
+
 </html>

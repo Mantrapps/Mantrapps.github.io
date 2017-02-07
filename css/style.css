@@ -259,6 +259,7 @@ Spacer
 #spacer1{
 	/* background-image: url(../img/spacer/1.jpg); */
 	background-image: url(../img/bg-mtn.jpg);
+	clip: rect(0, 100px, 200px, 0);
 	/* background-color: #529abb; */
 }
 #spacer2{
@@ -276,7 +277,7 @@ Intro
     height:535px;
     width:100%;
     background-color: #529abb;
-    background-image: url(../img/bg-mac.png);
+    background-image: url(../img/background.jpeg);
     background-position:center;
     background-repeat:no-repeat;
     overflow-y:hidden;
@@ -637,7 +638,7 @@ more media queries
 
 @media (max-width:768px) {
 	#intro{
-		background-image: url(../img/bg-mac.png);
+		background-image: url(../img/background.jpeg);
 		background-size:100%;
 	}
 	.box-team, .box-team img {
